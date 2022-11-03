@@ -5,20 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import kotlinx.android.synthetic.main.fragment_test.*
 
-class TestFragment : Fragment() {
-    private var image: Int? = null
-    private var text: String? = null
-    private var text2: String? = null
+class TestFragment(private val image: Int,private val text: String, private val text2: String) : Fragment() {
+    private lateinit var button: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            image = it.getInt("image", 0)
-            text = it.getString("text", "")
-            text2 = it.getString("text2", "")
-        }
     }
 
     override fun onCreateView(
@@ -34,16 +28,25 @@ class TestFragment : Fragment() {
         imageView.setImageResource(image!!)
         textView.text = text
         textView2.text = text2
+        button = view.findViewById(R.id.bt_onboard_finish)
+        if(image == R.drawable.startu) {
+            button.visibility = View.INVISIBLE
+        }
     }
 
     companion object {
-        fun newInstance(image: Int, text: String,text2:String) =
-            TestFragment().apply {
-                arguments = Bundle().apply {
-                    putInt("image", image)
-                    putString("text", text)
-                    putString("text2",text2)
-                }
-            }
+//        fun newInstance(image: Int, text: String, text2: String): Fragment {
+//            if (image == R.drawable.startu) {
+//
+//            }
+//            return TestFragment().apply {
+//                arguments = Bundle().apply {
+//                    putInt("image", image)
+//                    putString("text", text)
+//                    putString("text2", text2)
+//                }
+//
+//            }
+//        }
     }
 }
