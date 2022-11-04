@@ -25,6 +25,7 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:layout_marginTop="40sp"
+        android:fontFamily="@font/inter"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,16 +20,11 @@
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/inter"/>
 
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:nestedScrollingEnabled="true"
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/indicator"
-        app:layout_constraintTop_toBottomOf="@+id/btn_onboard_skip" />
+
 
     <me.relex.circleindicator.CircleIndicator3
         android:id="@+id/indicator"
@@ -38,6 +33,14 @@
         android:layout_marginBottom="34sp"
         app:ci_drawable="@drawable/orange_radius"
         app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:nestedScrollingEnabled="true"
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/indicator"
+        app:layout_constraintTop_toBottomOf="@+id/btn_onboard_skip" />
 
 
 
