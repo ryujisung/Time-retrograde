@@ -3,6 +3,7 @@ package com.example.viewpagerswipe
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -27,22 +28,44 @@ class MainActivity2 : AppCompatActivity() {
         }
         bnv_main.run {
             setOnNavigationItemSelectedListener {
+                val B = sharedPreference.getInt("score", 0)
                 when (it.itemId) {
                     R.id.home -> {
                         // 다른 프래그먼트 화면으로 이동하는 기능
                         val homeFragment = HomeFragment()
-                        supportFragmentManager.beginTransaction()
+                        supportFragmentManager
+                            .beginTransaction()
                             .replace(R.id.fl_container, homeFragment).commit()
                     }
                     R.id.writegaesimul -> {
-                        val assesmentFragment = assesmentFragment()
-                        supportFragmentManager.beginTransaction()
+                        val assesmentFragment = assesmentFragment(B)
+                        supportFragmentManager
+                            .beginTransaction()
                             .replace(R.id.fl_container, assesmentFragment).commit()
                     }
                 }
                 true
             }
             selectedItemId = R.id.home
+        }
+    }
+    fun changeFragment(index: Int,score:Int){
+        val sharedPreference = getSharedPreferences("other", 0)
+        val editor = sharedPreference?.edit()
+        editor?.putInt("score",score)
+        editor?.apply()
+        when(index){
+            1 -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fl_container, HomeFragment()).commit()
+            }
+
+            2 -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fl_container, assesmentFragment(score)).commit()
+            }
         }
     }
 }

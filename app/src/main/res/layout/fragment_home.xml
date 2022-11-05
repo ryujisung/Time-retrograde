@@ -134,7 +134,7 @@
         android:id="@+id/third_image"
         android:layout_width="40sp"
         android:layout_height="40sp"
-        android:src="@drawable/bus"
+        android:src="@drawable/recyclingbag"
         app:layout_constraintTop_toTopOf="@id/third_line"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/fourth_line"
@@ -142,12 +142,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="승용차 사용을 줄이고 대중교통을 이용합니다."
+        android:text="쓰레기를 줄입니다."
         android:textStyle="bold"
         android:fontFamily="@font/inter"
         app:layout_constraintTop_toTopOf="@id/third_line"
         app:layout_constraintStart_toEndOf="@+id/third_image"
-        android:layout_marginTop="15sp"
+        android:layout_marginTop="18sp"
         android:layout_marginStart="10sp"
         android:textColor="@color/black"
         android:textSize="10sp"
@@ -157,7 +157,7 @@
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="승용차를 사용하게 될 경우에는 에코드라이빙 습관을\n 유지합니다.(급가속, 급출발, 급정거 금지)"
+        android:text="쓰레기를 줄이고 재활용 쓰레기는 반드시 분리수거합니다."
         android:fontFamily="@font/inter"
         app:layout_constraintTop_toBottomOf="@id/third_firsttxt"
         app:layout_constraintStart_toEndOf="@+id/third_image"
@@ -170,5 +170,270 @@
         android:layout_height="0.5dp"
         android:background="@color/black"
         app:layout_constraintTop_toBottomOf="@id/third_checkbox"/>
+    <CheckBox
+        android:id="@+id/fourth_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/third_checkbox"
+        />
+    <ImageView
+        android:id="@+id/fourth_image"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:src="@drawable/plug"
+        app:layout_constraintTop_toTopOf="@id/fourth_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/fiveth_line"
+        android:layout_marginStart="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사용하지 않는 콘센트는 빼놓으세요!"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toTopOf="@id/fourth_line"
+        app:layout_constraintStart_toEndOf="@+id/fourth_image"
+        android:layout_marginTop="18sp"
+        android:layout_marginStart="10sp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:id="@+id/fourth_firsttxt"
+        />
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1년에 한 달 전기료가 절약됩니다.\n(가정 소비 전력의 11%가 대기전력)빈 방은 불을 끕니다."
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toBottomOf="@id/fourth_firsttxt"
+        app:layout_constraintStart_toEndOf="@+id/fourth_image"
+        android:layout_marginStart="10sp"
+        android:textSize="10sp"
+        />
+    <View
+        android:id="@+id/fiveth_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/fourth_checkbox"/>
+    <CheckBox
+        android:id="@+id/fiveth_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fourth_checkbox"
+        />
+    <ImageView
+        android:id="@+id/fiveth_image"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:src="@drawable/food"
+        app:layout_constraintTop_toTopOf="@id/fiveth_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/sixth_line"
+        android:layout_marginStart="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로컬푸드를 이용하셨나요?"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toTopOf="@id/fiveth_line"
+        app:layout_constraintStart_toEndOf="@+id/fiveth_image"
+        android:layout_marginTop="8sp"
+        android:layout_marginStart="10sp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:id="@+id/fiveth_firsttxt"
+        />
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="
+로컬푸드는 수송과 폐기에 따른 탄소 발생을 감축한다고 해요.\n
+수입식품 사용을 10% 줄이면 한 달 기준 1.39kg의 온실가스를 \n감축시킬 수 있습니다."
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toBottomOf="@id/fiveth_firsttxt"
+        app:layout_constraintStart_toEndOf="@+id/fiveth_image"
+        android:layout_marginStart="10sp"
+        android:textSize="10sp"
+        />
+    <View
+        android:id="@+id/sixth_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/fiveth_checkbox"/>
+    <CheckBox
+        android:id="@+id/sixth_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fiveth_checkbox"
+        />
+    <ImageView
+        android:id="@+id/sixth_image"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:src="@drawable/shower"
+        app:layout_constraintTop_toTopOf="@id/sixth_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/seventh_line"
+        android:layout_marginStart="15sp"
+        android:rotationY="180"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="샤워 시간을 줄여요!"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toTopOf="@id/sixth_line"
+        app:layout_constraintStart_toEndOf="@+id/sixth_image"
+        android:layout_marginTop="8sp"
+        android:layout_marginStart="10sp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:id="@+id/sixth_firsttxt"
+        />
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="
+샤워 시간을 1분을 줄이면 7kg의 CO2가 감소하고,\n
+ 주 2회 샤워 시 연간 환산 약 700kg의 CO2가 감소합니다.
+ \n(연간 140그루)"
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toBottomOf="@id/sixth_firsttxt"
+        app:layout_constraintStart_toEndOf="@+id/sixth_image"
+        android:layout_marginStart="10sp"
+        android:textSize="10sp"
+        />
+    <View
+        android:id="@+id/seventh_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/sixth_checkbox"/>
+    <CheckBox
+        android:id="@+id/seventh_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sixth_checkbox"
+        />
+    <ImageView
+        android:id="@+id/seventh_image"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:src="@drawable/recycle"
+        app:layout_constraintTop_toTopOf="@id/seventh_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/eighth_line"
+        android:layout_marginStart="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="분리배출 하셨나요?"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toTopOf="@id/seventh_line"
+        app:layout_constraintStart_toEndOf="@+id/seventh_image"
+        android:layout_marginTop="18sp"
+        android:layout_marginStart="10sp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:id="@+id/seventh_firsttxt"
+        />
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="깨끗이 헹궈서 분리 배출하면 당연히 탄소배출을 줄일 수 있겠죠?"
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toBottomOf="@id/seventh_firsttxt"
+        app:layout_constraintStart_toEndOf="@+id/seventh_image"
+        android:layout_marginStart="10sp"
+        android:textSize="10sp"
+        />
+    <View
+        android:id="@+id/eighth_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/seventh_checkbox"/>
+    <CheckBox
+        android:id="@+id/eighth_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="70sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seventh_checkbox"
+        />
+    <ImageView
+        android:id="@+id/eighth_image1"
+        android:layout_width="25sp"
+        android:layout_height="25sp"
+        android:src="@drawable/box"
+        app:layout_constraintTop_toTopOf="@id/eighth_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/nineth_line"
+        android:layout_marginStart="22.5sp"/>
+    <ImageView
+        android:id="@+id/eighth_image2"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:src="@drawable/no"
+        app:layout_constraintTop_toTopOf="@id/eighth_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/nineth_line"
+        android:layout_marginStart="15sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일회용품 사용을 줄이셨나요?"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toTopOf="@id/eighth_line"
+        app:layout_constraintStart_toEndOf="@+id/eighth_image2"
+        android:layout_marginTop="8sp"
+        android:layout_marginStart="10sp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:id="@+id/eighth_firsttxt"
+        />
+    <TextView
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="
+한국인이 1년에 쓰는 플라스틱 컵은 33억 개로,\n 
+지구에서 달까지 일렬로 세워놓을 수 있는 양이라는데요.\n
+우리 모두 텀블러를 사용합시다."
+        android:fontFamily="@font/inter"
+        app:layout_constraintTop_toBottomOf="@id/eighth_firsttxt"
+        app:layout_constraintStart_toEndOf="@+id/eighth_image2"
+        android:layout_marginStart="10sp"
+        android:textSize="10sp"
+        />
+    <View
+        android:id="@+id/nineth_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/eighth_checkbox"/>
+    <Button
+        android:id="@+id/assesment"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:textColor="@color/white"
+        android:text="평가"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/nineth_line" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
